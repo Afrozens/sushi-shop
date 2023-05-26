@@ -8,7 +8,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      backgroundColor: {
+        first: "#FFF0DE",
+        second: "#ECBA82",
+        third: "#b1454a",
+        fourth: "#758F6D",
+        fifth: "#171614"
+      },
+      colors: {
+        first: "#FFF0DE",
+        second: "#ECBA82",
+        third: "#b1454a",
+        fourth: "#758F6D",
+        fifth: "#171614"
+      },
+      flex: {
+        '1.22': '1.22 1.22 0%'
+      }
     },
   },
   plugins: [require("flowbite/plugin")],
