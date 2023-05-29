@@ -1,10 +1,14 @@
 "use client"
 
-export default function Providers() {
+import { ReactNode } from "react"
+import {Provider} from "react-redux"
+import { store } from "@/redux/store"
+
+export default function Providers({children}: {children : ReactNode}) {
     return (
-      <main>
-        <h2>HOLA</h2>
-      </main>
+      <Provider store={store}>
+        {children}
+      </Provider>
     )
 }
   

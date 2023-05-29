@@ -1,4 +1,4 @@
-import { Header } from "@/components";
+import { Header, Providers } from "@/components";
 import "./globals.css";
 import { Oswald } from "next/font/google";
 
@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="es">
       <body className={oswald.className}>
         <Header />
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

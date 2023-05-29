@@ -24,6 +24,9 @@ module.exports = {
       },
       flex: {
         '1.22': '1.22 1.22 0%'
+      },
+      lineHeight: {
+        extra: "4.5rem"
       }
     },
   },
