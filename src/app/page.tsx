@@ -1,4 +1,4 @@
-import { ButtonPrimary } from "@/components";
+import { FormButton, FormInput } from "@/components";
 import Image from "next/image";
 import Link from "next/link";
 import { BsPlayCircle, BsArrowUpRight } from "react-icons/bs";
@@ -10,36 +10,38 @@ export default function Home() {
   return (
     <>
       <main className="min-h-screen flex flex-col overflow-hidden">
-        <section className="lg:flex">
-        <article className="relative z-10 bg-third w-full flex lg:flex-1">
-          <Image
-            src="/assets/sushi-chopsticks.png"
-            alt="chopsticks with sushi image"
-            className="object-contain w-full lg:object-fill"
-            width={500}
-            height={500}
-          />
-          <h2 className="absolute bottom-0 text-5xl font-semibold text-white p-6 self-end break-words w-5 text-center leading-tight md:text-9xl md:leading-[10rem] lg:text-8xl lg:leading-[8rem]">
-            品寿司
-          </h2>
-        </article>
+        <section className="lg:flex lg:h-[calc(100vh-80px)]">
+          <article className="relative z-10 bg-third w-full flex lg:flex-1">
+            <Image
+              src="/assets/sushi-chopsticks.png"
+              alt="chopsticks with sushi image"
+              className="object-contain w-full lg:object-fill"
+              width={500}
+              height={500}
+            />
+            <h2 className="absolute bottom-0 text-5xl font-semibold text-white p-6 self-end break-words w-5 text-center leading-tight md:text-9xl md:leading-[10rem] lg:text-9xl lg:leading-[10rem]">
+              品寿司
+            </h2>
+          </article>
 
-        <article className="lg:flex-1.22 flex flex-col p-8 bg-first md:p-12 lg:p-16 lg:justify-center lg:items-center">
-          <h1 className="text-6xl font-bold leading-extra md:leading-[6rem] lg:text-7xl lg:leading-[7rem]">
-            Sushi Exquisito: El Arte del Sabor Japonés
-          </h1>
-          <p className="my-8 text-2xl text-black opacity-80 font-light leading-9 md:ml-4">
-            Combinamos los ingredientes más frescos con técnicas tradicionales
-            para ofrecerte una experiencia única e inolvidable en sushi.
-          </p>
-          <div className="flex flex-col gap-5 md:flex-row md:gap-10 md:items-center md:ml-4 lg:self-start">
-            <ButtonPrimary>ordena ahora</ButtonPrimary>
-            <button className="cursor-pointer transition hover:scale-110 active:scale-90 flex gap-5 items-center md:self-center md:mb-6">
-              <BsPlayCircle className="h-10 w-10 opacity-50" />
-              <h5 className="font-light text-xl">¿Cómo ordenar?</h5>
-            </button>
-          </div>
-        </article>
+          <article className="lg:flex-1.22 flex flex-col p-8 bg-first md:p-12 lg:p-16 lg:justify-center lg:items-center">
+            <h1 className="text-6xl font-light leading-extra md:leading-[6rem] lg:text-8xl lg:leading-[7rem]">
+              Sushi Exquisito: El Arte del Sabor Japonés
+            </h1>
+            <p className="my-8 text-2xl text-black opacity-80 font-light leading-9 md:ml-8 lg:leading-relaxed">
+              Combinamos los ingredientes más frescos con técnicas tradicionales
+              para ofrecerte una experiencia única e inolvidable en sushi.
+            </p>
+            <div className="flex flex-col gap-5 md:flex-row md:gap-10 md:items-center md:ml-8 lg:self-start">
+              <FormButton>ordena ahora</FormButton>
+              <button className="cursor-pointer transition hover:scale-110 active:scale-90 flex gap-5 items-center md:self-center md:mb-6   ">
+                <BsPlayCircle className="h-10 w-10 opacity-50 lg:w-12 lg:h-12" />
+                <h5 className="font-light text-xl lg:text-2xl">
+                  ¿Cómo ordenar?
+                </h5>
+              </button>
+            </div>
+          </article>
         </section>
 
         <section className="bg-first w-full lg:flex">
@@ -53,7 +55,7 @@ export default function Home() {
                 height={150}
               />
             </div>
-            <button className="w-48 flex gap-10 items-center absolute right-0 top-2/4 translate-y-[-50%] py-3 p-8 h-16 outline-none font-light capitalize text-lg leading-6 text-white bg-fifth rounded-s-[36px] md:hidden lg:flex">
+            <button className="w-48 flex gap-8 items-center absolute right-0 top-2/4 translate-y-[-50%] py-3 p-8 h-16 outline-none font-light capitalize text-lg leading-6 text-white bg-fifth rounded-s-[36px] md:hidden lg:flex lg:w-56 lg:h-20 lg:text-2xl">
               mas platos
               <BsArrowUpRight />
             </button>
@@ -69,10 +71,13 @@ export default function Home() {
           </aside>
 
           <article className="flex flex-col p-8 bg-first md:p-12 lg:flex-1.22 lg:p-16">
-            <h2 className="text-6xl font-bold leading-extra">
+            <h5 className="text-light text-third text-xl mb-5 tracking-widest">
+              Sobre nosotros / 私たちに関
+            </h5>
+            <h2 className="text-6xl font-light leading-extra tracking-widest">
               Descubre nuestra amplia variedad de rollos
             </h2>
-            <p className="my-8 text-xl text-black opacity-80 font-light leading-9">
+            <p className="my-8 text-xl text-black opacity-80 font-light leading-9 lg:text-2xl lg:leading-relaxed">
               <b className="underline line decoration-third">
                 Rollos exquisitos
               </b>
@@ -99,21 +104,19 @@ export default function Home() {
             Registra tu correo para estar al tanto de los cupones de descuento.
           </p>
           <form className="flex flex-col gap-5 lg:w-2/4 lg:items-center">
-            <input
-              type="text"
-              id="input-group-1"
-              className="bg-third border text-sm rounded-xl block w-full p-2.5 border-white text-white placeholder:text-white focus:ring-white focus:border-white md:h-16 md:rounded-3xl md:text-xl"
+            <FormInput
+              className="bg-third md:h-16"
               placeholder="nombre@komesushi.com"
+              type="text"
             />
-
-            <ButtonPrimary>Comienza</ButtonPrimary>
+            <FormButton className="h-16 w-56 text-xl leading-extra lg:w-64 lg:h-20 lg:text-2xl">
+              Comienza
+            </FormButton>
           </form>
         </section>
 
         <footer className="w-full flex flex-wrap justify-between items-center py-5 px-10 bg-first md:flex-col lg:flex-row">
-          <h4 className="uppercase text-fifth text-2xl md:text-3xl md:self-start">
-            Komesushi
-          </h4>
+          <h4 className="title text-fifth">Komesushi</h4>
           <div className="text-white justify-between items-center flex w-auto mt-6 mb-10 md:mb-0 md:mt-0">
             <ul className="flex font-medium space-x-8 mt-0">
               <li>

@@ -1,4 +1,21 @@
 @tailwind base;
 @tailwind components;
+@layer components {
+    .title {
+        @apply uppercase text-2xl lg:text-3xl lg:self-center lg:pl-8
+    }
+
+    .form-input {
+        @apply border text-sm rounded-xl block w-full p-2.5 border-white text-white placeholder:text-white focus:ring-white focus:border-white focus:outline-none  md:rounded-3xl md:text-xl
+    }
+
+    .form-btn {
+        @apply p-5 rounded-[36px] outline-none bg-fifth text-white capitalize font-light text-center flex justify-center items-center hover:scale-110 active:scale-90 transition mb-6
+    }
+
+    .nav-ul {
+        @apply bg-transparent flex shrink grow justify-end lg:h-full lg:w-full lg:flex-1.22 lg:px-16
+    }
+}
 @tailwind utilities;
 

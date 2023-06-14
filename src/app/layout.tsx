@@ -1,4 +1,4 @@
-import { Header, Providers } from "@/components";
+import { Header, Providers, Spinner } from "@/components";
 import "./globals.css";
 import { Oswald } from "next/font/google";
 
